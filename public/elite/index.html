@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELITE GAME STORE — Simulador de Compras</title>
+  <meta name="description" content="Equipe-se para a vitória. Jogue em outro nível. Loja gamer fictícia com simulador de compras.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__inner">
+      <a href="#inicio" class="logo" aria-label="ELITE GAME STORE — início">
+        <img src="assets/logo.svg" alt="" class="logo__simbolo" width="44" height="44">
+        <span class="logo__texto">
+          <span class="logo__nome">ELITE GAME</span>
+          <span class="logo__store">STORE</span>
+        </span>
+      </a>
+
+      <button class="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="menu" class="menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+        <a href="#simulacao" class="botao botao--primario botao--pequeno">Simular compra</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section id="inicio" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__texto">
+          <p class="selo">Acessórios gamer • Periféricos • Tecnologia</p>
+          <h1>Equipe-se para a <span class="destaque">vitória.</span></h1>
+          <p class="hero__sub">Descubra acessórios gamer que combinam desempenho, precisão e estilo. Escolha seus produtos favoritos e experimente nossa simulação de compras.</p>
+          <div class="hero__botoes">
+            <a href="#produtos" class="botao botao--secundario">Explorar produtos</a>
+            <button type="button" class="botao botao--primario" onclick="simularCompra()">Simular compra</button>
+          </div>
+        </div>
+        <div class="hero__imagem">
+          <img src="assets/hero.jpg" alt="Headset, mouse e teclado gamer iluminados em azul, ciano e roxo" width="640" height="448">
+        </div>
+      </div>
+    </section>
+
+    <section id="produtos" class="secao">
+      <div class="container">
+        <h2 class="secao__titulo">Produtos em destaque</h2>
+        <p class="secao__sub">Preços carregados diretamente do catálogo do servidor.</p>
+        <div id="lista-produtos" class="produtos" aria-live="polite">
+          <p class="carregando">Carregando produtos...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="secao secao--alt">
+      <div class="container">
+        <h2 class="secao__titulo">Como funciona</h2>
+        <ol class="passos">
+          <li class="passo"><span class="passo__num">1</span><h3>Escolha os produtos</h3><p>Veja o catálogo e decida o que vai levar.</p></li>
+          <li class="passo"><span class="passo__num">2</span><h3>Informe as quantidades</h3><p>Digite um número inteiro para cada item.</p></li>
+          <li class="passo"><span class="passo__num">3</span><h3>Confira o resultado</h3><p>Veja subtotal, desconto e total calculados pelo servidor.</p></li>
+        </ol>
+        <p class="aviso" role="note">Esta é uma simulação acadêmica. Nenhum pagamento real é realizado.</p>
+      </div>
+    </section>
+
+    <section id="simulacao" class="secao">
+      <div class="container simulacao">
+        <h2 class="secao__titulo">Pronto para subir de nível?</h2>
+        <ul class="instrucoes">
+          <li>Clique em "Simular compra".</li>
+          <li>Informe a quantidade desejada para cada produto.</li>
+          <li>Digite zero para não comprar um item.</li>
+          <li>Confira o resultado apresentado pelo navegador.</li>
+        </ul>
+        <p class="regra">Regra fictícia da loja: compras a partir de R$ 500,00 ganham 10% de desconto.</p>
+        <button type="button" class="botao botao--primario botao--grande" onclick="simularCompra()">Simular compra</button>
+      </div>
+    </section>
+  </main>
+
+  <footer id="sobre" class="rodape">
+    <div class="container rodape__grid">
+      <div>
+        <div class="logo logo--rodape">
+          <img src="assets/logo.svg" alt="" class="logo__simbolo" width="40" height="40">
+          <span class="logo__texto"><span class="logo__nome">ELITE GAME</span><span class="logo__store">STORE</span></span>
+        </div>
+        <p class="rodape__slogan">Equipe-se para a vitória. Jogue em outro nível.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#simulacao">Simular compra</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>Tecnologias</h3>
+        <p>HTML5 • CSS3 • JavaScript • Node.js • Express</p>
+      </div>
+      <div class="rodape__academico">
+        <p>Projeto desenvolvido por Luã Hayalla Oliveira Silva</p>
+        <p>Curso: Técnico em Desenvolvimento de Sistemas — Trilhas</p>
+        <p>Trilha: Lógica de Programação com JavaScript</p>
+        <p>Desafio 1 — Minha Loja: Simulador de Compras</p>
+        <p>2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
